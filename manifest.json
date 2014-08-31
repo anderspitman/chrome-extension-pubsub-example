@@ -1,16 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "CSS Isolation",
-  "description": "This extension demonstrates Content Script CSS Isolation",
+  "name": "Chrome Extension PubSub",
+  "description": "This extension demonstrates Content Script CSS Isolation with chromeps",
   "version": "1.0",
   "background" : {
-    "scripts" : ["background.js"]
+    "scripts" : ["chromeps.js"]
   },
   "content_scripts" : [
     {
       "matches" : ["<all_urls>", "http://*/*", "https://*/*"],
       "css" : ["content.css"],
-      "js" : ["content.js"]
+      "js" : ["chromeps.js", "content.js"]
     }
   ],
   "web_accessible_resources" : ["popup.html"]
